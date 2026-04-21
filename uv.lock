@@ -259,7 +259,7 @@ wheels = [
 ]
 
 [[package]]
-name = "hm-product-scraper-miray-mustafov"
+name = "hm-product-scraper"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

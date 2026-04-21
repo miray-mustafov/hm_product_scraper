@@ -103,7 +103,7 @@
   Integrated proxy rotation to avoid IP-based blocks.
     - *Note:* Despite testing 3 providers, H&M's protection currently holds the line.
     - *Status:* Ongoing development is tracked on
-      the [feat/proxy](https://github.com/miray-mustafov/hm_product_scraper_miray_mustafov/tree/feat/proxy) branch.  
+      the [feat/proxy](https://github.com/miray-mustafov/hm_product_scraper/tree/feat/proxy) branch.  
       <br>
 - **PyCharm Debugger Configuration:**  
   For convenient Scrapy execution debugging [.run](.run)  
@@ -138,7 +138,7 @@
 ## Folder Structure
 
 ```shell
-hm_product_scraper_miray_mustafov/
+hm_product_scraper/
 ├── hm_scraper/                     # project source root directory (contains scrapy.cfg)
 │   ├── hm_scraper/                 # project's python module (actual app code)
 │   │   ├── database.py             # [Load] db access layer
@@ -242,7 +242,7 @@ flowchart LR
 #### Open the terminal, navigate to a desired folder, and pull the project:
 
 ```shell
-git clone git@github.com:miray-mustafov/hm_product_scraper_miray_mustafov.git
+git clone git@github.com:miray-mustafov/hm_product_scraper.git
 ```
 
 <br>
@@ -250,7 +250,7 @@ git clone git@github.com:miray-mustafov/hm_product_scraper_miray_mustafov.git
 #### Navigate to the root level of the project:
 
 ```shell
-cd hm_product_scraper_miray_mustafov
+cd hm_product_scraper
 ```
 
 <br>
@@ -263,12 +263,24 @@ cd hm_product_scraper_miray_mustafov
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
+- or for bash:
+
+```bash
+curl -fsSL https://astral.sh/uv/install.sh | sh
+```
+
 - Then:
 
 ```shell
 uv venv --python 3.13
-.venv\Scripts\activate
 ```
+
+```shell
+.venv\Scripts\activate
+or for bash:
+source .venv/bin/activate
+```
+
 
 <br>
 
@@ -303,7 +315,7 @@ uv run pre-commit install --hook-type commit-msg --hook-type pre-commit
 
 <br>
 
-#### 🚀 Run the app from `hm_product_scraper_miray_mustafov/hm_scraper`:
+#### 🚀 Run the app from `hm_product_scraper/hm_scraper`:
 
 ```shell
 uv run scrapy crawl product_spider -O results/products_data_result.json
